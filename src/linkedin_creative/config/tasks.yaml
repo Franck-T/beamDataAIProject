@@ -1,0 +1,39 @@
+research_task:
+  description: >
+    Conduct a thorough research about {topic}
+    Make sure you find any interesting and relevant information given
+    the current year is 2024.
+  expected_output: >
+    A JSON file with the research findings. Each key should be a source of information and the
+    value should be a summary of the key findings in that source. The summary should highlight key facts.
+    The key facts should be the kinds of facts that could be easily cited in a LinkedIn post.
+  agent: researcher
+
+writing_task:
+  description: >
+    Review the research you get from the researcher and write a LinkedIn post based on it.
+  expected_output: >
+    A markdown file containing a LinkedIn post with a catchy title, a brief introduction, and a list of the most relevant information. 
+    Your post should include research-backed information and use citations to that work. It should be 
+    engaging, professional, and informative. Do your best to invite participation with the community that
+    reads it.
+  agent: copywriter
+
+editing_task:
+  description: >
+    Edit the report you get from the copywriter to make sure it is engaging, professional, and informative.
+    
+  expected_output: >
+    A markdown file containing the fully edited LinkedIn post with a catchy title, a brief introduction, and a list of the most relevant information.
+    By the time you're done with it it should be ready to be published. 
+  agent: editor
+
+fact_checking_task:
+  description: >
+    Check the LinkedIn post to make sure all the information is accurate and well cited. Verify that the citations
+    in the post are correct. 
+  expected_output: >
+    A markdown file containing a fully fact-checked LinkedIn post with all the information properly cited. Your file will have two parts:
+    first, a section with the content for the LinkedIn post that has any citation issues corrected. Second, a
+    section file with a list of the citations used in the post and a list of the citations corrected.
+  agent: factchecker

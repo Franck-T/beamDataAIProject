@@ -1,0 +1,21 @@
+[tool.poetry]
+name = "linkedin_creative"
+version = "0.1.0"
+description = "linkedin-creative using crewAI"
+authors = ["Your Name <you@example.com>"]
+
+[tool.poetry.dependencies]
+python = ">=3.10,<=3.13"
+crewai = { extras = ["tools"], version = ">=0.67.1,<1.0.0" }
+
+
+[tool.poetry.scripts]
+linkedin_creative = "linkedin_creative.main:run"
+run_crew = "linkedin_creative.main:run"
+train = "linkedin_creative.main:train"
+replay = "linkedin_creative.main:replay"
+test = "linkedin_creative.main:test"
+
+[build-system]
+requires = ["poetry-core"]
+build-backend = "poetry.core.masonry.api"
